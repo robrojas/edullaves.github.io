@@ -832,7 +832,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -858,6 +858,8 @@ section,
   font-size: 56px;
   font-weight: 700;
   line-height: 72px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
@@ -866,33 +868,108 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
+.hero .hero-subtitle {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
 
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
-  }
+.hero .hero-description {
+  color: #e8f4f8;
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero .hero-contact-info {
+  margin-bottom: 30px;
+}
+
+.hero .contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.hero .contact-phone:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.hero .hero-cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 14px 50px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 30px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-top: 0;
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: #fff;
+}
+
+.hero .btn-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.hero .btn-whatsapp:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  background: linear-gradient(135deg, #20ba58 0%, #25d366 100%);
+}
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero .btn-get-started {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .hero .hero-cta-buttons {
+    gap: 10px;
+  }
 }
 
 .hero .icon-box {
