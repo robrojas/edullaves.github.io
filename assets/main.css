@@ -932,15 +932,16 @@ section,
   display: flex;
   gap: 15px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hero .btn-get-started {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: #fff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2487ce 0%, #1a5fa0 100%);
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -949,14 +950,15 @@ section,
   transition: all 0.3s ease;
   margin-top: 0;
   border: none;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(36, 135, 206, 0.4);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .hero .btn-get-started:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  box-shadow: 0 6px 20px rgba(36, 135, 206, 0.6);
+  background: linear-gradient(135deg, #1a5fa0 0%, #2487ce 100%);
   color: #fff;
 }
 
@@ -987,6 +989,17 @@ section,
 
   .hero .hero-cta-buttons {
     gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .hero-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero .btn-get-started {
+    width: 100%;
   }
 }
 
